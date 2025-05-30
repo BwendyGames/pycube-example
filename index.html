@@ -68,52 +68,44 @@ else:
     (You need more money!)
 
 [[Back to Main Menu|Start]]</tw-passagedata><tw-passagedata pid="7" name="BuyBasic" tags="" position="900,650" size="100,100">$sinks[&#39;basic&#39;][&#39;owned&#39;] += 1
-$total_happiness += sinks[&#39;basic&#39;][&#39;happiness&#39;]
 
 You got a new Basic Sink! Let that sink in...
 
 [[Back to Shop|Shop]]
 [[View Collection|Collection]]</tw-passagedata><tw-passagedata pid="8" name="BuyGold" tags="" position="1025,650" size="100,100">$money -= shop_sinks[&#39;gold&#39;][&#39;price&#39;]
 $sinks[&#39;gold&#39;][&#39;owned&#39;] += 1
-$total_happiness += sinks[&#39;gold&#39;][&#39;happiness&#39;]
 
 You got a shiny new Gold Sink! Let that sink in...
 
 [[Back to Shop|Shop]]
 [[View Collection|Collection]]</tw-passagedata><tw-passagedata pid="9" name="BuyDiamond" tags="" position="1150,650" size="100,100">$money -= shop_sinks[&#39;diamond&#39;][&#39;price&#39;]
 $sinks[&#39;diamond&#39;][&#39;owned&#39;] += 1
-$total_happiness += sinks[&#39;diamond&#39;][&#39;happiness&#39;]
 
 You got an amazing Diamond Sink! Let that sink in...
 
 [[Back to Shop|Shop]]
-[[View Collection|Collection]]</tw-passagedata><tw-passagedata pid="10" name="WashBasic" tags="" position="900,775" size="100,100">$profit = sinks[&#39;basic&#39;][&#39;owned&#39;] * 10
-$money += profit
+[[View Collection|Collection]]</tw-passagedata><tw-passagedata pid="10" name="WashBasic" tags="" position="900,775" size="100,100">$money += sinks[&quot;basic&quot;][&quot;owned&quot;] * 10
 
 You wash your hands in the Basic Sink. It works fine.
 
 &lt;p style=&quot;color:green&quot;&gt;Profit??&lt;br&gt;
-+ ${profit}&lt;/p&gt;
++ ${sinks[&quot;basic&quot;][&quot;owned&quot;] * 10}&lt;/p&gt;
 
-&lt;button onclick=&quot;go(&#39;Start&#39;)&quot;&gt;Back&lt;/button&gt;</tw-passagedata><tw-passagedata pid="11" name="WashGold" tags="" position="1025,775" size="100,100">$profit = sinks[&#39;gold&#39;][&#39;owned&#39;] * 25
-$money += profit
+&lt;button onclick=&quot;go(&#39;Start&#39;)&quot;&gt;Back&lt;/button&gt;</tw-passagedata><tw-passagedata pid="11" name="WashGold" tags="" position="1025,775" size="100,100">$money += sinks[&quot;gold&quot;][&quot;owned&quot;] * 25
 
 You wash your hands in the Gold Sink. Luxurious and shiny.
 
 &lt;p style=&quot;color:green&quot;&gt;Profit??&lt;br&gt;
-+ ${profit}&lt;/p&gt;
++ ${sinks[&quot;gold&quot;][&quot;owned&quot;] * 25}&lt;/p&gt;
 
-&lt;button onclick=&quot;go(&#39;Start&#39;)&quot;&gt;Back&lt;/button&gt;
-</tw-passagedata><tw-passagedata pid="12" name="WashDiamond" tags="" position="1150,775" size="100,100">$profit = sinks[&#39;diamond&#39;][&#39;owned&#39;] * 100
-$money += profit
+&lt;button onclick=&quot;go(&#39;Start&#39;)&quot;&gt;Back&lt;/button&gt;</tw-passagedata><tw-passagedata pid="12" name="WashDiamond" tags="" position="1150,775" size="100,100">$money += sinks[&quot;diamond&quot;][&quot;owned&quot;] * 100
 
 You wash your hands in the Diamond Sink. It practically mints money.
 
 &lt;p style=&quot;color:green&quot;&gt;Profit??&lt;br&gt;
-+ ${profit}&lt;/p&gt;
++ ${sinks[&quot;diamond&quot;][&quot;owned&quot;] * 100}&lt;/p&gt;
 
-&lt;button onclick=&quot;go(&#39;Start&#39;)&quot;&gt;Back&lt;/button&gt;
-</tw-passagedata></tw-storydata>
+&lt;button onclick=&quot;go(&#39;Start&#39;)&quot;&gt;Back&lt;/button&gt;</tw-passagedata></tw-storydata>
   <style>
     body {
       background: #232323;
